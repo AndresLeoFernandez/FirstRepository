@@ -4,4 +4,4 @@ let rotulo = document.getElementById("rotulo");
 btnEnv.addEventListener("click", () => {
   console.log("La altura es", dato.value);
 });
-rotulo.innerHTML = "Indique un dato:";
+rotulo.innerHTML = "Indique la altura de la Persona:";
