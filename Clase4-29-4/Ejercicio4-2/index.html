@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>CLase 4 - Ejercicio 2</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <h4>Enunciado:</h4>
+    <p>
+      <i>
+        Ingrese la cantidad de productos y el precio.<br />
+        Si el precio de la compra supera los 1000 pesos<br />
+        tendra un descuento del 10 por ciento sobre el total.
+      </i>
+    </p>
+    <table>
+      <tr>
+        <td><span id="rotulo421"></span></td>
+        <td>
+          <input
+            id="dato421"
+            maxlength="4"
+            style="text-align: right; width: 50px;"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td><span id="rotulo422"></span></td>
+        <td>
+          <input
+            id="dato422"
+            maxlength=""
+            style="text-align: right; width: 50px;"
+          />
+        </td>
+      </tr>
+    </table>
+    <br />
+    <button id="enviar42" style="text-align: center; width: 150px;">
+      Enviar
+    </button>
+    <button
+      id="limpiar42"
+      onclick="dato421.value = '';dato422.value = '';return false;"
+      style="text-align: center; width: 150px;"
+    >
+      Limpiar
+    </button>
+    <script src="src/ejercicio42.ts"></script>
+  </body>
+</html>
