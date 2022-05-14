@@ -17,9 +17,11 @@ btnCalcular.addEventListener("click", () => {
     }
     return resultado;
   };
-
+  let res: number;
   if (num2 >= 0) {
-    let res: number = calcularPotencia(num1, num2);
+    res = calcularPotencia(num1, num2);
+    console.log("El resultado es", res);
+  } else {
+    console.log("El exponente debe ser mayor a 0");
   }
-  console.log("El resultado es", res);
 });
