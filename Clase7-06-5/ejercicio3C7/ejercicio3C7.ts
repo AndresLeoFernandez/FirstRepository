@@ -1,5 +1,6 @@
 let numero1 = document.getElementById("numero1");
 let btnCalcular = document.getElementById("calcular");
+let imprime = document.getElementById("imprimeResultado");
 
 btnCalcular.addEventListener("click", () => {
   let num1: number = Number(numero1.value);
@@ -19,4 +20,5 @@ btnCalcular.addEventListener("click", () => {
 
   let res: string = calcularDivisores(num1);
   console.log("Los divisores de " + num1 + " son: " + res);
+  imprime?.innerHTML = "Los divisores de " + num1 + " son: " + res;
 });
