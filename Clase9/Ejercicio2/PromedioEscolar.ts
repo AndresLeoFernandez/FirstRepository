@@ -1,30 +1,30 @@
-let alumnos: string[] = new Array(10);
-let notasPrimerTrimestre: number[] = new Array(10);
-let notasSegundoTrimestre: number[] = new Array(10);
-let notasTercerTrimestre: number[] = new Array(10);
+let alumnos: string[] = new Array(5);
+let notasPrimerTrimestre: number[] = new Array(5);
+let notasSegundoTrimestre: number[] = new Array(5);
+let notasTercerTrimestre: number[] = new Array(5);
 let cantidadAlumnos: number = 0;
 
-let darConformidad = (mensaje: string): boolean => {
-  let rta: string = "";
+function darConformidad(mensaje: string): boolean {
+  let rta;
   rta = prompt(mensaje);
-  while (rta !== "S" || rta !== "N") {
-    rta = prompt(mensaje);
-  }
+
   if (rta === "S" || rta === "s") {
     return true;
   } else {
     return false;
   }
-};
+}
 
-let solicitarNombreAlumno = (): string => {
+function solicitarNombreAlumno(): string {
   let valorNombre: string = "";
-  valorNombre = prompt("Indique el Nombre del Alumno:");
+  valorNombre = String(prompt("Indique el Nombre del Alumno:"));
   while (valorNombre === "") {
-    valorNombre = prompt("Indique el Nombre del Alumno, no puede ser vacio:");
+    valorNombre = String(
+      prompt("Indique el Nombre del Alumno, no puede ser vacio:")
+    );
   }
   return valorNombre;
-};
+}
 
 let solicitarNota = (): number => {
   let valorNota: number = 0;
@@ -74,3 +74,4 @@ while (deseaCargarAlumno) {
   cantidadAlumnos = cargarAlumno(alumnos, cantidadAlumnos);
   deseaCargarAlumno = darConformidad("Desea Cargar Alumno (S/N)");
 }
+console.log(cantidadAlumnos);
