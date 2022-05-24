@@ -39,6 +39,31 @@ let cargarNotaAlumno = (notasAlumnado: number[], orden: number) => {
   notasAlumnado[orden] = solicitarNota();
 };
 
+let promediosAnuales = (
+  alumnado: string[],
+  primerTrimestre: number[],
+  segundoTrimestre: number[],
+  tercerTrimestre: number[],
+  orden: number
+): number[] => {
+  let promedioAnual: number[] = new Array(orden);
+  for (
+    let indiceAlumnado: number = 0;
+    indiceAlumnado < orden;
+    indiceAlumnado++
+  ) {
+    promedioAnual[indiceAlumnado] =
+      (primerTrimestre[indiceAlumnado] +
+        segundoTrimestre[indiceAlumnado] +
+        tercerTrimestre[indiceAlumnado]) /
+      3;
+    console.log(
+      `${alumnado[indiceAlumnado]} obtuvo las siguientes notas: 1º Trimestre: ${primerTrimestre[indiceAlumnado]} - 2º Trimestre: ${segundoTrimestre[indiceAlumnado]} - 3º Trimestre: ${tercerTrimestre[indiceAlumnado]}  el promedio Anual es ${promedioAnual[indiceAlumnado]}`
+    );
+  }
+  return promedioAnual;
+};
+
 let cargarAlumno = (alumnado: string[], orden: number): number => {
   let deseaCargarNota: boolean;
   alumnado[orden] = solicitarNombreAlumno();
@@ -75,3 +100,13 @@ while (deseaCargarAlumno) {
   deseaCargarAlumno = darConformidad("Desea Cargar Alumno (S/N)");
 }
 console.log(cantidadAlumnos);
+console.log(
+  promediosAnuales(
+    alumnos,
+    notasPrimerTrimestre,
+    notasSegundoTrimestre,
+    notasTercerTrimestre,
+    cantidadAlumnos
+  ).toString()
+);
+console.log();
