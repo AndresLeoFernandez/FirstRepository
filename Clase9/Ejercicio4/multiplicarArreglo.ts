@@ -14,7 +14,9 @@ let multiplicarArreglos = (
 ) => {
   for (let indice: number = 0; indice < tope; indice++) {
     resultado[indice] = arreglo1[indice] * arreglo2[indice];
-    console.log(`Multiplicacion[${indice}]= ${resultado[indice]}`);
+    console.log(
+      `Multiplicacion[${indice}]= ${arreglo1[indice]} x ${arreglo2[indice]} = ${resultado[indice]}`
+    );
   }
 };
 
